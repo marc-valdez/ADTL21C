@@ -20,7 +20,7 @@ public class Main {
 		managers[0].set_name("Marc");
 		managers[0].set_ID("1111");
 		managers[0].set_salary(1000);
-		managers[0].set_employeeCount((byte)1);
+		managers[0].set_employeeCount(Constants.EMPLOYEECOUNT);
 		
 		Menu.printMenu(employees, managers);
 	}
