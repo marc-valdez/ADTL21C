@@ -1,40 +1,46 @@
 package online_shopping_system;
 
 public class Product {
-    private String productID;
+    private int ID;
 
-    public String getProductID() {
-        return productID;
+    public int getID() {
+        return ID;
     }
 
-    public void setProductID(String newValue) {
-        productID = newValue;
+    public void setID(int newValue) {
+        ID = newValue;
     }
 
-    private String productName;
+    private String name;
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String newValue) {
-        productName = newValue;
+    public void setName(String newValue) {
+        name = newValue;
     }
 
-    private double productPrice;
+    private double price;
 
-    public double getProductPrice() {
-        return productPrice;
+    public double getPrice() {
+        return price;
     }
 
-    public void setProductPrice(double newValue) {
-        productPrice = newValue;
+    public void setPrice(double newValue) {
+        price = newValue;
     }
+
+    private static int lastAssignedID = 0;
 
     // Constructor
-    public Product(String productID, String productName, double productPrice) {
-        this.productID = productID;
-        this.productName = productName;
-        this.productPrice = productPrice;
+    public Product(String name, double price) {
+        this.ID = lastAssignedID++;
+        this.name = name;
+        this.price = price;
+    }
+
+    public String toString() {
+        return "[" + Integer.toString(ID) + "] " + name + ", $" + price;
     }
 }
