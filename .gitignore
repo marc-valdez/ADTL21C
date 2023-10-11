@@ -33,3 +33,6 @@ replay_pid*
 # Eclipse Files
 .metadata/
 .settings/
+
+# Ignore Folders
+.vscode
